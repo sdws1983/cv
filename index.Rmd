@@ -1,6 +1,6 @@
 ---
-title: "Guangchuang Yu's CV"
-author: Guangchuang Yu
+title: "Yumin Huang's CV"
+author: Yumin Huang
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -30,7 +30,7 @@ library(glue)
 library(tidyverse)
 
 # Set this to true to have links turned into footnotes at the end of the document
-PDF_EXPORT <- FALSE
+PDF_EXPORT <- TRUE
 
 # Holds all the links that were inserted for placement at the end
 links <- c()
@@ -46,7 +46,7 @@ find_link <- regex("
   comments = TRUE)
 
 sanitize_links <- function(text){
-  if(PDF_EXPORT){
+  if(FALSE){
     str_extract_all(text, find_link) %>% 
       pluck(1) %>% 
       walk(function(link_from_text){
@@ -170,29 +170,29 @@ Aside
 ================================================================================
 
 
-![logo](ygc.jpg){width=100%}
+![logo](ymhuang.jpeg){width=100%}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
-  cat("View this CV online with links at _guangchuangyu.github.io/cv_")
+  cat("View this CV online with links at _sdws1983.github.io/cv_")
 }
 ```
 
-Contact {#contact}
+Contact 联系方式{#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> gcyu1@smu.edu.cn
-- <i class="fa fa-twitter"></i> guangchuangyu
-- <i class="fa fa-github"></i> github.com/YuLab-SMU
-- <i class="fa fa-link"></i> https://yulab-smu.top/
-- <i class="fa fa-weixin"></i> YuLabSMU (公众号)
-- <i class="fa fa-phone"></i> (86) 13826432521
+- <i class="fa fa-envelope"></i> ymhuang@cau.edu.cn
+- <i class="fa fa-github"></i> github.com/sdws1983
+- <i class="fa fa-link"></i> https://sdws1983.github.io/
+- <i class="fa fa-phone"></i> (86) 15652920371
 
 <br>
 
-```{r}
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+
+if(TRUE){}else{
 profile = jsonlite::fromJSON("profile.json")
 cites = jsonlite::fromJSON("citation.json")
 if (profile$total_cites < sum(cites$cites))
@@ -207,7 +207,7 @@ glue(
 
 "
   ) %>% print()
-
+}
 ```
 
 ![](citation.png)
@@ -225,35 +225,27 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Guangchuang Yu {#title}
+黄育敏 Yumin Huang {#title}
 --------------------------------------------------------------------------------
 
 
 ```{r, results='asis'}
-intro_text <- glue("Professor of Bioinformatics at [Southern Medical University](http://www.smu.edu.cn/). I have developed more than 20 R packages, including ",
-  {Biocpkg("clusterProfiler")}, ", ", 
-  {Biocpkg("ChIPseeker")}, ", ",
-  {Biocpkg("treeio")}, " and ",
-  {Biocpkg("ggtree")}, 
-  ", to help biologists to explore and understand their data.")
+intro_text <- glue("PhD candidate of Crop genetics and breeding at [China Agricultural University](http://www.cau.edu.cn/).")
+
+cat(sanitize_links(intro_text))
+cat("\n")
+cat("\n")
+intro_text <- glue("\n中国农业大学，作物遗传育种专业博士.")
 
 cat(sanitize_links(intro_text))
 ```
 
-I am broadly interested in bioinformatics, metagenomics, molecular evolution, data integration and visualization.
+I am broadly interested in plant genomics, comparative genomics, molecular evolution, epigenomics, 3D genomics, bioinformatics, data integration and visualization.
+
+本人对植物基因组学，比较基因组学，分子进化，表观遗传学，三维基因组学，生物信息学，数据处理及可视化等方面有着广泛兴趣。
 
 
-
-
-Research Experience {data-icon=laptop}
---------------------------------------------------------------------------------
-
-```{r, results='asis', echo = FALSE}
-print_section(position_data, 'research_positions')
-```
-
-
-Education {data-icon=graduation-cap data-concise=true}
+Education 教育经历 {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
@@ -262,20 +254,7 @@ print_section(position_data, 'education')
 
 
 
-Certificate {data-icon=book}
---------------------------------------------------------------------------------
-
-::: aside
-![](figures/2020-highly-cited-researcher.png){width=100%}
-:::
-
-
-```{r, results='asis', echo = FALSE}
-print_section(position_data, 'certificate')
-```
-
-
-Scholarships & Awards {data-icon=trophy}
+Scholarships & Awards 奖励荣誉 {data-icon=trophy}
 --------------------------------------------------------------------------------
 
 
@@ -285,63 +264,7 @@ print_section(position_data, 'award')
 
 
 
-
-
-
-Grants  {data-icon=chart-line}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'grant')
-```
-
-
-Books {data-icon=book}
---------------------------------------------------------------------------------
-
-
-
-```{r}
-print_section(position_data, 'book_chapters')
-```
-
-
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-
-
-```{r}
-print_section(position_data, 'teaching_positions')
-```
-
-::: aside
-
-
-![](figures/10th-anniversary-logo-2.png){width=100%}
-
-```{r}
-# ggtree <- "ggtree: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data"
-ggtree <- "ggtree (Yu et al. 2017)"
-url <- 'http://onlinelibrary.wiley.com/doi/10.1111/2041-210X.12628/abstract'
-
-ggtree2 <- glue("[{ggtree}]({url})")
-journal <- "**_Methods in Ecology and Evolution_**"
-
-url2 <- "https://methodsblog.com/2020/11/19/ggtree-tree-visualization/"
-journal2 <- glue("[{journal}]({url2})")
-
-glue(
-  " 
-  The {ggtree2} paper was selected as a feature article to celebrate the 10^th^ anniversary of the launch of {journal2}.
-  "
-) %>% print()
-```
-
-
-:::
-
-Publications {data-icon=book}
+Publications 发表文章 {data-icon=book}
 --------------------------------------------------------------------------------
 
 
@@ -351,28 +274,14 @@ print_section(position_data, 'academic_articles')
 
 
 
-Conference proceedings {data-icon=group}
---------------------------------------------------------------------------------
+::: aside
+![](figures/guojiang.jpeg){width=100%}
+:::
 
 
 
 ```{r}
-print_section(position_data, 'presentation')
-```
-
-
-Professional affliations {data-icon=home}
---------------------------------------------------------------------------------
-
-
-
-```{r}
-print_section(position_data, 'affliation')
-```
-
-
-```{r}
-if(PDF_EXPORT){
+if(FALSE){
   cat("
   
 Links {data-icon=link}
