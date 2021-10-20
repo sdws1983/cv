@@ -30,7 +30,7 @@ library(glue)
 library(tidyverse)
 
 # Set this to true to have links turned into footnotes at the end of the document
-PDF_EXPORT <- FALSE
+PDF_EXPORT <- F
 
 # Holds all the links that were inserted for placement at the end
 links <- c()
@@ -184,15 +184,15 @@ Contact 联系方式{#contact}
 
 
 - <i class="fa fa-envelope"></i> ymhuang@cau.edu.cn
-- <i class="fa fa-github"></i> github.com/sdws1983
+- <i class="fa fa-github"></i> https://github.com/sdws1983
 - <i class="fa fa-link"></i> https://sdws1983.github.io/
 - <i class="fa fa-phone"></i> (86) 15652920371
 
 <br>
 
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+```{r message=FALSE, warning=FALSE}
 
-if(TRUE){}else{
+#if(TRUE){}else{
 profile = jsonlite::fromJSON("profile.json")
 cites = jsonlite::fromJSON("citation.json")
 if (profile$total_cites < sum(cites$cites))
@@ -207,7 +207,7 @@ glue(
 
 "
   ) %>% print()
-}
+#}
 ```
 
 ![](citation.png)
@@ -230,7 +230,7 @@ Main
 
 
 ```{r, results='asis'}
-intro_text <- glue("PhD candidate of Crop genetics and breeding at [China Agricultural University](http://www.cau.edu.cn/).")
+intro_text <- glue("PhD of Crop genetics and breeding at [China Agricultural University](http://www.cau.edu.cn/).")
 
 cat(sanitize_links(intro_text))
 cat("\n")
@@ -240,9 +240,9 @@ intro_text <- glue("\n中国农业大学，作物遗传育种专业博士.")
 cat(sanitize_links(intro_text))
 ```
 
-I am broadly interested in plant genomics, comparative genomics, molecular evolution, epigenomics, 3D genomics, bioinformatics, data integration and visualization.
+I am broadly interested in comparative genomics, molecular evolution, epigenomics, 3D genomics, bioinformatics, data integration and visualization.
 
-本人对植物基因组学，比较基因组学，分子进化，表观遗传学，三维基因组学，生物信息学，数据处理及可视化等方面有着广泛兴趣。
+本人对比较基因组学，分子进化，表观遗传学，三维基因组学，生物信息学，数据处理及可视化等方面有着广泛兴趣。
 
 
 Education 教育经历 {data-icon=graduation-cap data-concise=true}
@@ -274,9 +274,18 @@ print_section(position_data, 'academic_articles')
 
 
 
-::: aside
-![](figures/guojiang.jpeg){width=100%}
-:::
+
+
+
+
+Conference attendance 学术活动 {data-icon=group}
+--------------------------------------------------------------------------------
+
+
+
+```{r}
+print_section(position_data, 'presentation')
+```
 
 
 
