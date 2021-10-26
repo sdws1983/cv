@@ -3,9 +3,11 @@
 [Beijing Forestry University](http://www.bjfu.edu.cn) 北京林业大学,"B.S., Biotechnology 生物技术专业, 学士","Beijing, CN",2012,2016,[生物科学与技术学院](http://biology.bjfu.edu.cn/) ,NA,NA,education,2
 1,1,,2019,2019,NA,NA,NA,certificate,NA
 1,1,The University of Hong Kong,2015,2015,NA,NA,NA,certificate,NA
-1,1,Southern Medical University,2018,9999,"2021-present, Director, Department of Bioinformatics","2019-2021, Associate director, Department of Bioinformatics",NA,research_positions,NA
-1,1,The University of Hong Kong,2017,2018,NA,NA,NA,research_positions,NA
-1,1,Jinan University,2009,2013,NA,NA,NA,research_positions,NA
+主导,玉米基因组中大片段缺失变异的动态演化研究,NA,2018,2021,独立完成所有基因组学分析，参与设计了课题的研究思路及技术路线，与通讯作者共同完成了文章撰写及同行评议。,通过整合细胞遗传学、基因组组装、群体遗传学、系统发育学以及进化比较等多种手段实现了一项创新性的跨学科研究。,在国际知名基因组学期刊《Genome Biology》发表研究论文一篇，获得海内外同行的广泛关注及积极评价。__解析了基因组进化和物种形成过程中“化石”结构变异的动态进化和功能，为玉米物种形成、驯化进程等理论研究以及基因组结构变异遗传资源在育种中的应用提供了新的思路。__,research_positions,1
+主导,玉米全基因组中开放染色质的遗传和重塑,NA,2020,Present,独立完成所有基因组学分析，参与设计了课题的研究思路及技术路线。,开发了一套跨基因组比较分析流程，探究开放染色质与heterosis的关联。,主要基因组学结果基本完成，文章手稿准备中。,research_positions,2
+主导参与,薏苡基因组组装注释分析,NA,2016,2019,合作完成该课题的部分基因组学分析及分子实验，参与设计了该课题的研究思路以及技术路线，参与完成了文章撰写及同行评议。,主要负责物种树的构建、基因家族分析、薏苡GBS群体数据分析、遗传图谱的构建及以薏苡转录组的比较分析，参与了薏苡群体测序材料的收集和构建。,在国际知名植物领域期刊《Molecular Plant》发表研究论文一篇，__发布了世界上首个薏苡基因组参考序列，揭示了薏苡的进化及驯化足迹。__,research_positions,3
+参与,实验室公共数据分析,NA,2016,Present,帮助实现实验室其他成员的生物信息学分析需求。,"实施RNA-seq, ChIP-seq, ATAC-seq, BSA-seq等一些测序数据的分析，基因序列比较分析，群体遗传学分析，驯化位点挖掘。",参与了实验室其他一些文章的发表。,research_positions,4
+负责人,实验室生物信息学资源的维护管理,NA,2016,Present,实验室计算服务器的管理维护，公共数据的备份，测序相关事宜的沟通。,独立搭建维护实验室网站，开发了多种工具服务于实验室成员科研日常。,NA,research_positions,5
 1,1,University of Southern Denmark,2019,2019,NA,NA,"PhD level class, invited lecture",teaching_positions,NA
 1,1,Southern Medical University,2021,2021,NA,NA,Undergraduate level class,teaching_positions,NA
 1,1,Southern Medical University,2019,2021,NA,NA,Undergraduate level class,teaching_positions,NA
