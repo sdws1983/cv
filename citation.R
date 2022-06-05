@@ -7,7 +7,7 @@ library(ggimage)
 library(ggtree)
 
 
-#Sys.setenv(http_proxy="http://127.0.0.1:43723")
+Sys.setenv(http_proxy="http://127.0.0.1:1087")
 
 set_scholar_mirror()
 
