@@ -182,7 +182,7 @@ Contact 联系方式{#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> ymhuang@cau.edu.cn
+- <i class="fa fa-envelope"></i> ymhuang@fafu.edu.cn
 - <i class="fa fa-github"></i> https://github.com/sdws1983
 - <i class="fa fa-link"></i> https://sdws1983.github.io/
 - <i class="fa fa-phone"></i> (86) 15652920371
@@ -229,22 +229,35 @@ Main
 
 
 ```{r, results='asis'}
-intro_text <- glue("PhD of Crop genetics and breeding at [China Agricultural University](http://www.cau.edu.cn/).")
+intro_text <- glue("PhD of Crop genetics and breeding")
 
 cat(sanitize_links(intro_text))
 cat("\n")
 cat("\n")
-intro_text <- glue("\n中国农业大学，作物遗传育种专业博士.")
+
+intro_text <- glue("Lecturer")
+cat(sanitize_links(intro_text))
+cat("\n")
+cat("\n")
+
+intro_text <- glue("[Center for Genomics and Biotechnology](http://genome.fafu.edu.cn/), [Haixia Institute of Science and Technology](https://net.fafu.edu.cn/hist/main.htm)")
+cat(sanitize_links(intro_text))
+cat("\n")
+cat("\n")
+
+intro_text <- glue("[Fujian Agriculture and Forestry University](https://www.fafu.edu.cn/)")
 
 cat(sanitize_links(intro_text))
+cat("\n")
+cat("\n")
+
 ```
 
 I am broadly interested in comparative genomics, population genetics, molecular evolution, epigenomics, 3D genomics, bioinformatics, data integration and visualization.
 
-本人对比较基因组学，群体遗传学，分子进化，表观遗传学，三维基因组学，生物信息学，数据处理及可视化等方面有着广泛兴趣。
 
 
-Education 教育经历 {data-icon=graduation-cap data-concise=true}
+Education & Research {data-icon=desktop data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
@@ -253,7 +266,7 @@ print_section(position_data, 'education')
 
 
 
-Scholarships & Awards 奖励荣誉 {data-icon=trophy}
+Scholarships & Awards {data-icon=trophy}
 --------------------------------------------------------------------------------
 
 
@@ -263,7 +276,7 @@ print_section(position_data, 'award')
 
 
 
-Publications 发表文章 {data-icon=book}
+Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 
@@ -273,15 +286,8 @@ print_section(position_data, 'academic_articles')
 
 
 
-Research Experience 研究经历 {data-icon=laptop}
---------------------------------------------------------------------------------
-```{r}
-print_section(position_data, 'research_positions')
-```
 
-
-
-Conference attendance 学术活动 {data-icon=group}
+Conference attendance {data-icon=group}
 --------------------------------------------------------------------------------
 
 
